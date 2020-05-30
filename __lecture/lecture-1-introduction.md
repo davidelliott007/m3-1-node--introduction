@@ -4,13 +4,37 @@
 
 ---
 
-### Why Node?
+## Node.Js
 
 ---
 
-Server-side rendering VS. Client-side rendering [🔗](https://www.codeconquest.com/website/client-side-vs-server-side/)
+### What is Node?
 
-_thoughts?_
+- A server runtime
+- A way to run JS locally
+
+---
+
+It's like the JS environment in the browser, but with no DOM (no `window`, no `document.createElement`)
+
+---
+
+Node comes built in with utilities for:
+
+- loading files on the local machine
+- Resolving paths
+- Become an HTTP server (like LiveServer)
+- Loading large files
+
+---
+
+We'll be using it as a _backend server_.
+
+What are some other languages/frameworks that can be used instead?
+
+---
+
+### Why Node?
 
 ---
 
@@ -87,7 +111,7 @@ It contains all the names of all the modules needed for the project.
 
 You want your friend to cook a specific meal. So you send him the recipe.
 
-##### What about the ingredients? You can either 
+##### What about the ingredients? You can either
 
 - ship him/her all of the ingredients
 - give him a list of ingredients and leave it to him/her to get them himself.
@@ -117,3 +141,17 @@ To install all of a project's dependencies, you type `yarn install`.
 All of the dependencies listed in the packages.json will be installed.
 
 ---
+
+### Importing
+
+To use a module, you import it with `require`:
+
+```js
+const multiply = require('multiply');
+
+multiply(3, 6);
+```
+
+---
+
+[Next lecture: Express](../lecture-2-express)
