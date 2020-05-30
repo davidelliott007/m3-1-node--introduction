@@ -13,8 +13,19 @@
       <%- include('../partials/questions/3') %>
       <div class="box answer">
         <h3>Answer</h3>
+
+        <img src=<%- homer.imageUrl %>>
+        <h2>Name: <%- homer.name %></h2>
+        <h3>DOB: <%- homer.dob %></h3>
+        <h3>Profession: <%- homer.profession %></h3>
+        <h3>Favorite Food<%- homer.favoriteFood %></h3>
+        <h3>Favorite Beverage<%- homer.favoriteBeverage %></h3>
+        
         <!-- render answer here -->
       </div>
     </div>
   </div>
+  <% current_question = "3" %>
+  <%- include('../partials/questions/navButtons') %>
+
 </body>

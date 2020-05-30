@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<head>
-  <title>Node: Workshop 1</title>
-  <link rel="stylesheet" href="./css/styles.css" />
-</head>
+<%- include('../partials/questions/head') %>
 <body>
-  <header>
-    <h1>Node: Workshop 1</h1>
-  </header>
+  <%- include('../partials/questions/header') %>
   <div class="main">
     <h2>Part 2</h2>
     <div class="content">
@@ -18,4 +12,8 @@
       </div>
     </div>
   </div>
+
+  <% current_question = "7" %>
+  <%- include('../partials/questions/navButtons') %>
+
 </body>

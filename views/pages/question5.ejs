@@ -12,9 +12,25 @@
     <div class="content">
       <%- include('../partials/questions/5') %>
       <div class="box answer">
-        <h3>Answer</h3>
-        <!-- render answer here -->
+        <div class="box answer">
+
+
+        <h3>Top 5 girls names in the England and Wales</h3>
+        <ol>
+          <%
+          // we do this because the list-style is defined in the css as none for ordered lists
+            let counter = 0; 
+            popularGirlNames.forEach(girl => {
+              counter++; %>
+          <li> <%=counter %>. <%=girl %></li>
+          <% }); %> 
+        </ol>
+        </div>
       </div>
+
     </div>
   </div>
+  <% current_question = "5" %>
+  <%- include('../partials/questions/navButtons') %>
+
 </body>

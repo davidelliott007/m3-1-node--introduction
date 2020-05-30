@@ -1,0 +1,21 @@
+<div class="nav-box">
+    <nav>
+        <% 
+    let current_index = questions.indexOf(current_question);
+    let prev_page = '/question'+questions[current_index-1];
+    let next_page = '/question'+questions[current_index+1];
+    let prevUrlString = `location.href="http://localhost:8000${prev_page}"`
+    let nextUrlString = `location.href="http://localhost:8000${next_page}"`
+    %>
+
+        <% if (prev_page !== "/questionundefined") { %>
+        <button onclick="<%= prevUrlString %>" type="button">
+            Previous</button>
+        <% } %>
+
+        <% if (next_page !== "/questionundefined") { %>
+        <button onclick="<%= nextUrlString %>" type="button">
+            Next</button>
+        <% } %>
+    </nav>
+</div>
