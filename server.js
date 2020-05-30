@@ -3,7 +3,6 @@
 // import the needed node_modules.
 const express = require('express');
 const morgan = require('morgan');
-const url = require('url');
 
 // We need to "require" the files whose content we reference in this file.
 const exercisesP1 = require('./__workshop/exercisesP1');
@@ -46,6 +45,8 @@ express()
     .get('/question9', q9)
     .get('/question10', q10)
     .get('/', homepage)
+
+    // slight change
 
     // this serves up the homepage
     // .get('/', (req, res) => {
