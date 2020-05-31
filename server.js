@@ -24,6 +24,7 @@ const fourOhFour = (req, res) => res.render('pages/fourOhfour');
 const homepage = (req, res) => res.render('pages/homepage');
 
 const testPage = (req, res) => res.render('pages/dave');
+const nyanCat = (req, res) => res.render('pages/nyancat');
 
 
 
@@ -41,6 +42,7 @@ express()
      .set('view engine', 'ejs')
 
     // endpoints
+    .get ('/nyancat', nyanCat)
 
     .get ('/testSite', testSite)
     .get('/question1', exercisesP1.q1)
