@@ -3,6 +3,8 @@
 // import the needed node_modules.
 const express = require('express');
 const morgan = require('morgan');
+const url = require(`url`);
+const http = require(`http`);
 
 // We need to "require" the files whose content we reference in this file.
 const exercisesP1 = require('./__workshop/exercisesP1');
@@ -16,10 +18,13 @@ const q7 = (req, res) => res.render('pages/question7', {questions, current_quest
 const q8 = (req, res) => res.render('pages/question8', {questions, current_question});
 const q9 = (req, res) => res.render('pages/question9', {questions, current_question});
 const q10 = (req, res) => res.render('pages/question10', {questions, current_question});
-const davePage = (req, res) => res.render('pages/dave');
+const testSite = (req, res) => res.render('pages/testSite');
 const fourOhFour = (req, res) => res.render('pages/fourOhfour');
 
 const homepage = (req, res) => res.render('pages/homepage');
+
+const testPage = (req, res) => res.render('pages/dave');
+
 
 
 express()
@@ -28,12 +33,16 @@ express()
     // Any requests for static files will go into the public folder
     // This is where our CSS lives!
     .use(express.static('public'))
+     .use(express.static('imgs'))
+
 
 
     // We are using ejs as our templating engine. see https://ejs.co/
-    .set('view engine', 'ejs')
+     .set('view engine', 'ejs')
 
     // endpoints
+
+    .get ('/testSite', testSite)
     .get('/question1', exercisesP1.q1)
     .get('/question2', exercisesP1.q2)
     .get('/question3', exercisesP1.q3)
